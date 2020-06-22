@@ -1,0 +1,15 @@
+[Unit]
+Description=Tunnel Radar
+Wants=network-online.target
+Requires=network.target
+After=network.target network-online.target
+
+[Service]
+; service
+Type=simple
+PIDFile=/var/run/tunnel-radar.pid
+ExecStart=/usr/local/bin/tunnel-radar -c /etc/tunnel-redis/config.yml
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
