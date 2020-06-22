@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"io"
 	"log"
 	"net"
@@ -27,12 +26,6 @@ type Tunnel struct {
 
 func (tunnel *Tunnel) Spawn() error {
 
-	if tunnel.Disabled == true {
-		tunnel.Status = text.FgRed.Sprint("OFFLINE")
-		fmt.Println(tunnel)
-		return nil
-	}
-
 	// Start accepting connections
 	listener, err := net.Listen("tcp", tunnel.Source)
 	if err != nil {
@@ -42,44 +35,41 @@ func (tunnel *Tunnel) Spawn() error {
 
 	defer listener.Close()
 
+	tunnel.Status = text.FgGreen.Sprint("ONLINE")
+
 	log.Printf("Tunnel %s active and listening on %s => %s => %s\r\n", tunnel.Alias, tunnel.Source, tunnel.Remote, tunnel.Destination)
-	for {
-		if tunnel.Disabled == true {
-			listener.Close()
-			tunnel.Status = text.FgRed.Sprint("OFFLINE")
-			return nil
-		}
+	for tunnel.Disabled == false {
 
-		tunnel.Status = text.FgGreen.Sprint("ONLINE")
+		conn, err := listener.Accept()
 
-		aConn, err := listener.Accept()
 		if err != nil {
 			log.Printf("An error occurred while accepting a connection on %s. Error: %s\r\n", tunnel.Alias, err)
 			return err
 		}
 
-		go tunnel.Flow(aConn)
+		go tunnel.Flow(conn)
 	}
-
 	return nil
 }
 
-func (tunnel *Tunnel) Flow(aConn net.Conn) error {
+func (tunnel *Tunnel) Flow(conn net.Conn) error {
 
 	bConn, err := ssh.Dial("tcp", tunnel.Remote, tunnel.ClientConfig)
 	if err != nil {
-		tunnel.Disabled = true
 		log.Printf("An error occurred establishing the SSH connection with %s. Error: %s\r\n", tunnel.Alias, err)
+		tunnel.Disable()
+		return err
 	}
 
 	cConn, err := bConn.Dial("tcp", tunnel.Destination)
 	if err != nil {
-		tunnel.Disabled = true
 		log.Printf("An error occurred establishing the SSH connection with the destination of %s. Error: %s\r\n", tunnel.Alias, err)
+		tunnel.Disable()
+		return err
 	}
 
-	go tunnel.ProxyData(aConn, cConn)
-	go tunnel.ProxyData(cConn, aConn)
+	go tunnel.ProxyData(conn, cConn)
+	go tunnel.ProxyData(cConn, conn)
 
 	return nil
 }
@@ -87,7 +77,16 @@ func (tunnel *Tunnel) Flow(aConn net.Conn) error {
 func (tunnel *Tunnel) ProxyData(legA, legB net.Conn) {
 	_, err := io.Copy(legA, legB)
 	if err != nil {
-		tunnel.Disabled = true
 		log.Printf("An error occurred while forwarding connections between endpoints on %s. Error: %s\r\n", tunnel.Alias, err)
 	}
+}
+
+func (tunnel *Tunnel) Enable() {
+	tunnel.Status = text.FgYellow.Sprint("CONNECTING")
+	tunnel.Disabled = false
+	go tunnel.Spawn()
+}
+func (tunnel *Tunnel) Disable() {
+	tunnel.Status = text.FgRed.Sprint("OFFLINE")
+	tunnel.Disabled = true
 }

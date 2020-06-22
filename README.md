@@ -83,6 +83,7 @@ TBD.
 
 ## TODO :wrench:
 * Add more configuration options
+* Add retry in case tunnel goes down
 * Add Makefile
 * Docker deployment & Build
 * Organize code structure
