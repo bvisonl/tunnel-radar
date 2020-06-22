@@ -75,7 +75,7 @@ func StartCliServer(host string, port int) {
 	for {
 		cliConn, err := listen.Accept()
 		if err != nil {
-			log.Println("An error occurred accepting a connection from a CLI. Error: %s\r\n", err)
+			log.Printf("An error occurred accepting a connection from a CLI. Error: %s\r\n", err)
 			continue
 		}
 		go getCommand(cliConn)
