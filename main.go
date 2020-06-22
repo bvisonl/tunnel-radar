@@ -14,7 +14,7 @@ func main() {
 	cliServerHost := flag.String("ish", "127.0.0.1", "Host on which the CLI server will listen for commands (default 127.0.0.1)")
 	cliServerPort := flag.Int("isp", 7779, "Port on which the CLI server will listen for commands  (default 7779)")
 
-	configPath := flag.String("c", "./config.yml", "Configuration file path")
+	configPath := flag.String("c", "/etc/tunnel-radar/config.yml", "Configuration file path")
 	debug := flag.Bool("d", false, "Enable debugging")
 	flag.Parse()
 

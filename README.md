@@ -14,7 +14,7 @@ A tool to manage your SSH tunnels
 ## Installation 🚧
 ```bash
 # Download from the repository
-$ git clone https://github.com/bvison/redis-seer.git
+$ git clone https://github.com/bvison/tunnel-radar.git
 $ cd tunnel-radar
 $ go build -o tunnel-radar
 ```
@@ -26,11 +26,11 @@ You should see a `tunnel-radar` binary inside the folder
 If you want the service to be registered as a service:
 
 ```bash
-$ cp tunnel-redis.service /lib/system/systemd/tunnel-redis.service
+$ cp tunnel-radar.service /lib/system/systemd/tunnel-radar.service
 $ systemctl daemon reload
 ```
 
-Make sure to edit the `tunnel-redis.service` to specify the correct path to the configuration file. By default, it looks for it in `/etc/tunnel-redis/config.yml`
+Make sure to edit the `tunnel-radar.service` to specify the correct path to the configuration file. By default, it looks for it in `/etc/tunnel-radar/config.yml`
 
 You should see a `tunnel-radar` binary inside the folder
 
