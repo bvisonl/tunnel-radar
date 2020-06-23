@@ -4,14 +4,15 @@
 
 ![GitHub go.mod Go version (subfolder of monorepo)](https://img.shields.io/github/go-mod/go-version/bvisonl/tunnel-radar) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/bvisonl/tunnel-radar) ![GitHub stars](https://img.shields.io/github/stars/bvisonl/tunnel-radar) ![Go](https://github.com/bvisonl/tunnel-radar/workflows/Go/badge.svg)
 
-A tool to manage your SSH tunnels
+🚧 Under development 🚧
 
+A tool to manage your SSH tunnels
 
 ## Requirements 📋
 
 * `Go` if you want to build the project from source (otherwise download one of the releases)
 
-## Installation 🚧
+## Installation 👨‍💻
 ```bash
 # Download from the repository
 $ git clone https://github.com/bvison/tunnel-radar.git
@@ -21,7 +22,7 @@ $ go build -o tunnel-radar
 
 You should see a `tunnel-radar` binary inside the folder
 
-### Installing the service
+### Installing the service 🚥
 
 If you want the service to be registered as a service:
 
