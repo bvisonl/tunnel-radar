@@ -11,8 +11,6 @@ func main() {
 	cli := flag.Bool("i", false, "Enter in CLI mode to execute commands on TunnelRadar")
 	cliHost := flag.String("ih", "127.0.0.1", "CLI host to connect to (default 127.0.0.1)")
 	cliPort := flag.Int("ip", 7779, "CLI Port to connect to (default 7779)")
-	cliServerHost := flag.String("ish", "127.0.0.1", "Host on which the CLI server will listen for commands (default 127.0.0.1)")
-	cliServerPort := flag.Int("isp", 7779, "Port on which the CLI server will listen for commands  (default 7779)")
 
 	configPath := flag.String("c", "/etc/tunnel-radar/config.yml", "Configuration file path")
 	debug := flag.Bool("d", false, "Enable debugging")
@@ -35,7 +33,7 @@ func main() {
 		}
 
 		// Start listening for commands
-		StartCliServer(*cliServerHost, *cliServerPort)
+		StartCliServer(tunnelRadarConfig.CliServerHost, tunnelRadarConfig.CliServerPort)
 
 	}
 }

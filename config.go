@@ -12,7 +12,9 @@ import (
 var tunnelRadarConfig TunnelRadarConfig
 
 type TunnelRadarConfig struct {
-	Tunnels map[string]*Tunnel `yaml:"tunnels"`
+	CliServerHost string             `yaml:"cliServerHost"`
+	CliServerPort int                `yaml:"cliServerPort"`
+	Tunnels       map[string]*Tunnel `yaml:"tunnels"`
 }
 
 // LoadConfig - Load the configuration from ./config.yml
@@ -33,9 +35,19 @@ func loadConfig(configPath string) {
 		os.Exit(1)
 	}
 
+	// Set the Host and Port for the CLI
+	if tunnelRadarConfig.CliServerHost == "" {
+		tunnelRadarConfig.CliServerHost = "127.0.0.1"
+	}
+
+	if tunnelRadarConfig.CliServerPort == 0 {
+		tunnelRadarConfig.CliServerPort = 7779
+	}
+
 	// Configure clients
 	for alias, tunnel := range tunnelRadarConfig.Tunnels {
 
+		// Set the Alias
 		tunnel.Alias = alias
 
 		// Set the Authentication method

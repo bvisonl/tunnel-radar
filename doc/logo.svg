@@ -7,186 +7,152 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
    sodipodi:docname="logo.svg"
-   id="svg28"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   id="svg8"
    version="1.1"
-   height="400"
-   width="580">
+   viewBox="0 0 210 297"
+   height="297mm"
+   width="210mm">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     inkscape:window-maximized="1"
+     inkscape:window-y="-8"
+     inkscape:window-x="1358"
+     inkscape:window-height="997"
+     inkscape:window-width="1680"
+     inkscape:guide-bbox="true"
+     showguides="true"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="825.73921"
+     inkscape:cx="418.29252"
+     inkscape:zoom="1.979899"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base">
+    <sodipodi:guide
+       id="guide1128"
+       orientation="1,0"
+       position="177.33333,67.014572" />
+    <sodipodi:guide
+       id="guide1132"
+       orientation="0,-1"
+       position="158.62447,32.536802" />
+  </sodipodi:namedview>
   <metadata
-     id="metadata34">
+     id="metadata5">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <defs
-     id="defs32" />
-  <sodipodi:namedview
-     inkscape:current-layer="svg28"
-     inkscape:window-maximized="1"
-     inkscape:window-y="-8"
-     inkscape:window-x="3038"
-     inkscape:cy="200"
-     inkscape:cx="197.21088"
-     inkscape:zoom="1.8375"
-     showgrid="false"
-     id="namedview30"
-     inkscape:window-height="1027"
-     inkscape:window-width="1920"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0"
-     guidetolerance="10"
-     gridtolerance="10"
-     objecttolerance="10"
-     borderopacity="1"
-     bordercolor="#666666"
-     pagecolor="#ffffff" />
-  <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
   <g
-     inkscape:export-ydpi="38.151188"
-     inkscape:export-xdpi="38.151188"
-     id="g26">
-    <title
-       id="title10">Layer 1</title>
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <circle
+       inkscape:export-ydpi="31.559174"
+       inkscape:export-xdpi="31.559174"
+       inkscape:export-filename="C:\Users\Benjamin\path1047.png"
+       r="38"
+       cy="215.93509"
+       cx="111.11518"
+       id="path1047"
+       style="fill:#005c00;fill-opacity:1;stroke:none;stroke-width:0.643369;stroke-miterlimit:4;stroke-dasharray:5.14696, 5.14696;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       inkscape:export-ydpi="31.559174"
+       inkscape:export-xdpi="31.559174"
+       inkscape:export-filename="C:\Users\Benjamin\path1047.png"
+       id="path1136"
+       d="m 111.125,178.0015 v 76.03818"
+       style="fill:none;stroke:#008000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+    <path
+       inkscape:export-ydpi="31.559174"
+       inkscape:export-xdpi="31.559174"
+       inkscape:export-filename="C:\Users\Benjamin\path1047.png"
+       id="path1138"
+       d="M 72.964581,215.25744 H 149.13639"
+       style="fill:#008000;stroke:#008000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+    <circle
+       inkscape:export-ydpi="31.559174"
+       inkscape:export-xdpi="31.559174"
+       inkscape:export-filename="C:\Users\Benjamin\path1047.png"
+       r="11.626225"
+       cy="215.01834"
+       cx="110.91685"
+       id="path1140"
+       style="fill:none;fill-opacity:1;stroke:#008000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       inkscape:export-ydpi="31.559174"
+       inkscape:export-xdpi="31.559174"
+       inkscape:export-filename="C:\Users\Benjamin\path1047.png"
+       style="fill:none;fill-opacity:1;stroke:#008000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path1140-8"
+       cx="111.18412"
+       cy="215.01834"
+       r="24.669617" />
+    <circle
+       inkscape:export-ydpi="31.559174"
+       inkscape:export-xdpi="31.559174"
+       inkscape:export-filename="C:\Users\Benjamin\path1047.png"
+       r="37.127213"
+       cy="215.68651"
+       cx="110.91685"
+       id="path1140-8-7"
+       style="fill:none;fill-opacity:1;stroke:#008000;stroke-width:3.00995;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       inkscape:export-ydpi="31.559174"
+       inkscape:export-xdpi="31.559174"
+       inkscape:export-filename="C:\Users\Benjamin\path1047.png"
+       sodipodi:nodetypes="casac"
+       id="path1189"
+       d="m 93.076612,232.05677 c 0,0 4.549702,3.96944 7.269738,5.17166 3.31883,1.46689 6.48637,2.30382 10.63732,2.31188 3.4793,0.007 6.5524,-0.52696 9.55635,-1.73425 3.22136,-1.29466 8.68479,-5.7493 8.68479,-5.7493"
+       style="fill:none;stroke:#ffff00;stroke-width:0.865;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2.595,0.865;stroke-dashoffset:0;stroke-opacity:1" />
     <ellipse
-       fill="#1eaa1e"
-       stroke-width="1.5"
-       cx="275.500003"
-       cy="199.624443"
-       id="svg_1"
-       rx="115.000003"
-       ry="102.171318"
-       stroke="#007f00" />
+       inkscape:export-ydpi="31.559174"
+       inkscape:export-xdpi="31.559174"
+       inkscape:export-filename="C:\Users\Benjamin\path1047.png"
+       ry="2.4206648"
+       rx="2.3386083"
+       cy="230.18588"
+       cx="91.873909"
+       id="path1172"
+       style="fill:#00c700;fill-opacity:1;stroke:none;stroke-width:1.22807;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <ellipse
-       fill="#1eaa1e"
-       stroke-width="1.5"
-       cx="277.10255"
-       cy="200.491621"
-       id="svg_3"
-       rx="101.602507"
-       ry="89.243524"
-       stroke="#5fb774" />
-    <ellipse
-       fill="#1eaa1e"
-       stroke-width="1.5"
-       cx="276.589732"
-       cy="200.110816"
-       id="svg_4"
-       rx="83.653833"
-       ry="73.478136"
-       stroke-dasharray="2,2"
-       stroke="#5fb774" />
-    <ellipse
-       fill="#1eaa1e"
-       stroke-width="1.5"
-       cx="278.128182"
-       cy="199.2034"
-       id="svg_5"
-       rx="61.602593"
-       ry="54.109221"
-       stroke="#5fb774" />
-    <ellipse
-       fill="#1eaa1e"
-       stroke-width="1.5"
-       cx="279.153818"
-       cy="197.907931"
-       id="svg_6"
-       rx="38.525723"
-       ry="33.839433"
-       stroke-dasharray="2,2"
-       stroke="#5fb774" />
-    <ellipse
-       fill="#1eaa1e"
-       stroke-width="1.5"
-       cx="279.153812"
-       cy="197.263823"
-       id="svg_7"
-       rx="18.525766"
-       ry="16.272282"
-       stroke="#5fb774" />
-    <line
-       fill="none"
-       x1="212.765959"
-       y1="244.68085"
-       x2="322.978737"
-       y2="277.872338"
-       id="svg_10"
-       stroke-linejoin="null"
-       stroke-linecap="null"
-       stroke="#bf0000" />
-    <ellipse
-       fill="#00bbff"
-       stroke="#00bbff"
-       stroke-width="0"
-       cx="209.689221"
-       cy="242.283614"
-       id="svg_8"
-       rx="4.615375"
-       ry="4.615375" />
-    <ellipse
-       fill="#00bbff"
-       stroke="#00bbff"
-       stroke-width="0"
-       cx="326.284969"
-       cy="278.879356"
-       id="svg_9"
-       rx="4.615375"
-       ry="4.615375" />
-    <line
-       fill="none"
-       x1="257.44681"
-       y1="145.531902"
-       x2="308.510655"
-       y2="116.170204"
-       id="svg_14"
-       stroke-linejoin="null"
-       stroke-linecap="null"
-       stroke="#bf0000" />
-    <ellipse
-       fill="#e0e000"
-       stroke="#00bbff"
-       stroke-width="0"
-       cx="256.497729"
-       cy="147.815527"
-       id="svg_11"
-       rx="4.615375"
-       ry="4.615375" />
-    <ellipse
-       fill="#e0e000"
-       stroke="#00bbff"
-       stroke-width="0"
-       cx="309.263686"
-       cy="115.900633"
-       id="svg_12"
-       rx="4.615375"
-       ry="4.615375" />
-    <line
-       fill="none"
-       x1="212.765959"
-       y1="244.68085"
-       x2="322.978737"
-       y2="277.872338"
-       id="svg_13"
-       stroke-linejoin="null"
-       stroke-linecap="null"
-       stroke="#bf0000" />
+       inkscape:export-ydpi="31.559174"
+       inkscape:export-xdpi="31.559174"
+       inkscape:export-filename="C:\Users\Benjamin\path1047.png"
+       style="fill:#00c700;fill-opacity:1;stroke:none;stroke-width:1.22807;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path1172-9"
+       cx="130.69479"
+       cy="230.2527"
+       rx="2.3386083"
+       ry="2.4206648" />
     <text
-       fill="#ffffff"
-       stroke-width="0"
-       x="220.573106"
-       y="194.095643"
-       id="svg_15"
-       font-size="39"
-       font-family="Georgia, Times, 'Times New Roman', serif"
-       text-anchor="start"
-       xml:space="preserve"
-       transform="matrix(2.5561200485651336,0,0,2.5561200485651336,-358.3424447634151,-263.14856196464837) "
-       stroke="#bf0000"
-       font-weight="bold">TR</text>
+       inkscape:export-ydpi="31.559174"
+       inkscape:export-xdpi="31.559174"
+       inkscape:export-filename="C:\Users\Benjamin\path1047.png"
+       id="text1193"
+       y="213.94925"
+       x="82.051735"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;line-height:1.25;font-family:'Berlin Sans FB Demi';-inkscape-font-specification:'Berlin Sans FB Demi, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;font-family:'Berlin Sans FB Demi';-inkscape-font-specification:'Berlin Sans FB Demi, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffff00;fill-opacity:1;stroke-width:0.264583"
+         y="213.94925"
+         x="82.051735"
+         id="tspan1191"
+         sodipodi:role="line">Tunnel Radar</tspan></text>
   </g>
 </svg>

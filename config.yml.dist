@@ -1,11 +1,13 @@
 tunnels:
-  tunnelA:
-    disabled: false
-    source: "0.0.0.0:7778"
-    remote: "127.0.0.1:22"
-    destination: "10.0.0.1:80"
+  serverA:
+    cliServerHost: "127.0.0.1"
+    cliServerPort: 7779
+    disabled: false # if true, this tunnel will have to be manually enabled
+    source: "0.0.0.0:6000"
+    remote: "127.0.0.1:6001"
+    destination: "whoami:80"
     auth:
       user: "root"
+      password: "root"
       # Either password or key are required
-      password: "password"
-      key: "/root/.ssh/id_rsa"
+      # key: "/root/.ssh/id_rsa"

@@ -22,12 +22,18 @@ type Tunnel struct {
 	Disabled     bool   `yaml:"disabled"`
 	Status       string
 	ClientConfig *ssh.ClientConfig
+	Listener     net.Listener
 }
 
 func (tunnel *Tunnel) Spawn() error {
 
+	if tunnel.Listener != nil {
+		tunnel.Listener.Close()
+	}
+
 	// Start accepting connections
 	listener, err := net.Listen("tcp", tunnel.Source)
+	tunnel.Listener = listener
 	if err != nil {
 		log.Printf("An error occurred while connecting to %s. Error: %s\r\n", tunnel.Alias, err)
 		return err
@@ -39,10 +45,9 @@ func (tunnel *Tunnel) Spawn() error {
 
 	log.Printf("Tunnel %s active and listening on %s => %s => %s\r\n", tunnel.Alias, tunnel.Source, tunnel.Remote, tunnel.Destination)
 	for tunnel.Disabled == false {
-
 		conn, err := listener.Accept()
 
-		if err != nil {
+		if err != nil && err != io.EOF {
 			log.Printf("An error occurred while accepting a connection on %s. Error: %s\r\n", tunnel.Alias, err)
 			return err
 		}

@@ -114,7 +114,7 @@ func getCommand(conn net.Conn) {
 				conn.Write([]byte(fmt.Sprintf("Missing alias of tunnel (i.e. enable tunnel1)%s", TUNNEL_RADAR_EOF)))
 			}
 			alias := cmd[1]
-			tunnelRadarConfig.Tunnels[alias].Enable()
+			(*tunnelRadarConfig.Tunnels[alias]).Enable()
 			conn.Write([]byte(alias + " has been enabled." + "\n" + TUNNEL_RADAR_EOF))
 
 		case "disable":
@@ -122,7 +122,7 @@ func getCommand(conn net.Conn) {
 				conn.Write([]byte(fmt.Sprintf("Missing alias of tunnel (i.e. disable tunnel1)%s", TUNNEL_RADAR_EOF)))
 			}
 			alias := cmd[1]
-			tunnelRadarConfig.Tunnels[alias].Disable()
+			(*tunnelRadarConfig.Tunnels[alias]).Disable()
 			conn.Write([]byte(alias + " has been disabled." + "\n" + TUNNEL_RADAR_EOF))
 
 		default:

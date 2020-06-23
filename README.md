@@ -40,16 +40,19 @@ You should see a `tunnel-radar` binary inside the folder
 
 ```yaml
 tunnels:
-  tunnelA:
-    disabled: false
-    source: "0.0.0.0:7778"
-    remote: "127.0.0.1:22"
-    destination: "10.0.0.1:80"
+  serverA:
+    cliServerHost: "127.0.0.1"
+    cliServerPort: 7779
+    disabled: false # if true, this tunnel will have to be manually enabled
+    source: "0.0.0.0:6000"
+    remote: "127.0.0.1:6001"
+    destination: "whoami:80"
     auth:
       user: "root"
+      password: "root"
       # Either password or key are required
-      password: "password"
-      key: "/root/.ssh/id_rsa"
+      # key: "/root/.ssh/id_rsa"
+
 
 ```
 ## Usage 🏹
@@ -79,9 +82,23 @@ If so the service is ready to accept connections on the different enabled tunnel
 
 ## CLI Usage 💻
 
-TBD.
+In order to run the `cli` to manage the tunnels you can use the same binary with the flags specified above:
 
-## TODO :wrench:
+```bash
+$ ./tunnel-radar -d -i -ih 127.0.0.1 -ip 7779
+```
+
+The prompt of the CLI will show up and then you can start communicating with the service like:
+
+<div style="text-align:center"><img src="./doc/images/usage_2.png"></div>
+
+As of right now these are the available commands:
+
+* **list/ls**: Display the list of declared tunnels
+* **enable [alias]**: Enables a tunnel
+* **disable [alias]**: Disables a tunnel
+
+## TODO 🔨
 * Add more configuration options
 * Add retry in case tunnel goes down
 * Add Makefile
@@ -95,6 +112,6 @@ TBD.
 * Run benchmarks
 * Ansible deployment
 
-## Contribution :construction_worker:
+## Contribution 👨‍🏭
 
 TBD.

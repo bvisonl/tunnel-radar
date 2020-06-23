@@ -1,0 +1,8 @@
+version: "2"
+services:
+  jumpServer:
+    image: gotechnies/alpine-ssh
+    ports:
+      - "7761:22"
+  whoami:
+    image: containous/whoami
