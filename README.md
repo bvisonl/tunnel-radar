@@ -2,7 +2,7 @@
 
 <div style="text-align:center"><img src="./doc/logo.png"></div>
 
-![GitHub go.mod Go version (subfolder of monorepo)](https://img.shields.io/github/go-mod/go-version/bvisonl/tunnel-radar) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/bvisonl/tunnel-radar) ![GitHub stars](https://img.shields.io/github/stars/bvisonl/tunnel-radar) ![Go](https://github.com/bvisonl/tunnel-radar/workflows/Go/badge.svg)
+![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/bvisonl/tunnel-radar) ![GitHub stars](https://img.shields.io/github/stars/bvisonl/tunnel-radar) ![Go](https://github.com/bvisonl/tunnel-radar/workflows/Go/badge.svg)
 
 🚧 Under development 🚧
 
