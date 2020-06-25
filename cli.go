@@ -92,6 +92,11 @@ func getCommand(conn net.Conn) {
 
 		if err != nil && err != io.EOF {
 			fmt.Println("read error:", err)
+			return
+		}
+
+		if string(data) == "" {
+			continue
 		}
 
 		cmd := strings.Split(string(data), " ")
@@ -124,6 +129,10 @@ func getCommand(conn net.Conn) {
 			alias := cmd[1]
 			(*tunnelRadarConfig.Tunnels[alias]).Disable()
 			conn.Write([]byte(alias + " has been disabled." + "\n" + TUNNEL_RADAR_EOF))
+
+		case "exit":
+			conn.Close()
+			return
 
 		default:
 			conn.Write([]byte(fmt.Sprintf("Command %s not implemented yet.\r\n%s", data, TUNNEL_RADAR_EOF)))

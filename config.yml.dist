@@ -1,7 +1,8 @@
+---
+cliServerHost: "127.0.0.1"
+cliServerPort: 7779
 tunnels:
   serverA:
-    cliServerHost: "127.0.0.1"
-    cliServerPort: 7779
     disabled: false # if true, this tunnel will have to be manually enabled
     source: "0.0.0.0:6000"
     remote: "127.0.0.1:6001"

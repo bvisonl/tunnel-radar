@@ -31,6 +31,13 @@ func (tunnel *Tunnel) Spawn() error {
 		tunnel.Listener.Close()
 	}
 
+	sshConn, err := ssh.Dial("tcp", tunnel.Remote, tunnel.ClientConfig)
+	if err != nil {
+		log.Printf("An error occurred establishing the SSH connection with %s. Error: %s\r\n", tunnel.Alias, err)
+		tunnel.Disable()
+		return err
+	}
+
 	// Start accepting connections
 	listener, err := net.Listen("tcp", tunnel.Source)
 	tunnel.Listener = listener
@@ -52,29 +59,21 @@ func (tunnel *Tunnel) Spawn() error {
 			return err
 		}
 
-		go tunnel.Flow(conn)
+		go tunnel.Flow(conn, sshConn)
 	}
 	return nil
 }
 
-func (tunnel *Tunnel) Flow(conn net.Conn) error {
-
-	bConn, err := ssh.Dial("tcp", tunnel.Remote, tunnel.ClientConfig)
-	if err != nil {
-		log.Printf("An error occurred establishing the SSH connection with %s. Error: %s\r\n", tunnel.Alias, err)
-		tunnel.Disable()
-		return err
-	}
-
-	cConn, err := bConn.Dial("tcp", tunnel.Destination)
+func (tunnel *Tunnel) Flow(conn net.Conn, sshConn *ssh.Client) error {
+	destConn, err := sshConn.Dial("tcp", tunnel.Destination)
 	if err != nil {
 		log.Printf("An error occurred establishing the SSH connection with the destination of %s. Error: %s\r\n", tunnel.Alias, err)
 		tunnel.Disable()
 		return err
 	}
 
-	go tunnel.ProxyData(conn, cConn)
-	go tunnel.ProxyData(cConn, conn)
+	go tunnel.ProxyData(conn, destConn)
+	go tunnel.ProxyData(destConn, conn)
 
 	return nil
 }
