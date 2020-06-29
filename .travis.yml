@@ -1,0 +1,13 @@
+sudo: required
+services:
+  - docker
+
+env:
+  COMPOSE_VERSION: "1.25.4"
+  CONFIG_FILE: "./tests/config.test.yml"
+
+before_install:
+  - curl -L https://github.com/docker/compose/releases/download/${COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+  - chmod +x docker-compose
+  - sudo mv docker-compose /usr/local/bin
+  - docker-compose -f tests/servers/docker-compose.yml up -d

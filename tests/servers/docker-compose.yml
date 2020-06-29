@@ -3,6 +3,6 @@ services:
   jumpServer:
     image: gotechnies/alpine-ssh
     ports:
-      - "7761:22"
+      - "3200:22"
   whoami:
     image: containous/whoami

@@ -3,9 +3,12 @@ package main
 import (
 	"flag"
 	"fmt"
+	"time"
 )
 
 func main() {
+
+	time.Sleep(time.Second * 2)
 
 	// Configurations by flag
 	cli := flag.Bool("i", false, "Enter in CLI mode to execute commands on TunnelRadar")

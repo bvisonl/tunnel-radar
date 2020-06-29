@@ -1,0 +1,11 @@
+---
+cliServerHost: "0.0.0.0"
+cliServerPort: 3101
+tunnels:
+  serverA:
+    source: ":3100"
+    remote: "127.0.0.1:3200"
+    destination: "whoami:80"
+    auth:
+      user: "root"
+      password: "root"
