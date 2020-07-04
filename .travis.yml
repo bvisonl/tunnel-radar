@@ -1,5 +1,9 @@
 language: go
+go:
+  - tip
+
 sudo: required
+
 services:
   - docker
 
@@ -13,4 +17,5 @@ before_install:
   - sudo mv docker-compose /usr/local/bin
   - docker-compose -f tests/servers/docker-compose.yml up -d
 
-script: go test -v
+script:
+  - $GOPATH/bin/goveralls -service=travis-ci
