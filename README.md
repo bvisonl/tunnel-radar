@@ -2,7 +2,7 @@
 
 <div style="text-align:center"><img src="./doc/logo.png"></div>
 
-![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/bvisonl/tunnel-radar) ![GitHub stars](https://img.shields.io/github/stars/bvisonl/tunnel-radar) [![Build Status](https://travis-ci.org/bvisonl/tunnel-radar.svg?branch=master)](https://travis-ci.org/bvisonl/tunnel-radar)
+![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/bvisonl/tunnel-radar) ![GitHub stars](https://img.shields.io/github/stars/bvisonl/tunnel-radar) [![Build Status](https://travis-ci.org/bvisonl/tunnel-radar.svg?branch=master)](https://travis-ci.org/bvisonl/tunnel-radar) [![Coverage Status](https://coveralls.io/repos/github/bvisonl/tunnel-radar/badge.svg)](https://coveralls.io/github/bvisonl/tunnel-radar)
 
 🚧 Under development 🚧
 
