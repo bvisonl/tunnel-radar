@@ -5,6 +5,7 @@ import (
 	"log"
 	"os"
 
+	"github.com/jedib0t/go-pretty/v6/table"
 	"golang.org/x/crypto/ssh"
 	"gopkg.in/yaml.v2"
 )
@@ -76,4 +77,16 @@ func loadConfig(configPath string) {
 		}
 
 	}
+}
+
+func (config *TunnelRadarConfig) list() (list string, err error) {
+	t := table.NewWriter()
+	t.AppendHeader(table.Row{"Alias", "Listen", "Remote", "Destination", "Status"})
+	for alias, tunnel := range tunnelRadarConfig.Tunnels {
+		t.AppendRow([]interface{}{alias, tunnel.Source, tunnel.Remote, tunnel.Destination, tunnel.Status})
+	}
+	t.SetStyle(table.StyleColoredBright)
+	list = t.Render()
+
+	return list, nil
 }

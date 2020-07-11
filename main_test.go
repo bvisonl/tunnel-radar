@@ -1,8 +1,8 @@
 package main
 
 import (
-	"testing"
 	"os"
+	"testing"
 )
 
 func TestMain(m *testing.M) {
@@ -14,6 +14,8 @@ func TestMain(m *testing.M) {
 	}
 
 	loadConfig(configFile)
+
+	go StartCliServer(tunnelRadarConfig.CliServerHost, tunnelRadarConfig.CliServerPort)
 
 	os.Exit(m.Run())
 }
