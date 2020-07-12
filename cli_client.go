@@ -39,16 +39,18 @@ func NewCliClient(host string, port int) (*CliClient, error) {
 func (client *CliClient) listen() {
 
 	for {
+		fmt.Printf("%s:%d> ", client.Host, client.Port)
 		cmd, _ := client.Reader.ReadString('\n')
 		if cmd == "" {
 			continue
 		}
-		fmt.Printf("%s:%d> ", client.Host, client.Port)
-		client.sendCommand(cmd)
+		result := client.sendCommand(cmd)
+		fmt.Println(result)
+
 	}
 }
 
-func (client *CliClient) sendCommand(cmd string) {
+func (client *CliClient) sendCommand(cmd string) string {
 	// Send Command
 	client.Conn.Write([]byte(cmd + "\n"))
 
@@ -74,5 +76,6 @@ func (client *CliClient) sendCommand(cmd string) {
 		buffer.Write(data)
 	}
 
-	fmt.Println(buffer.String())
+	return buffer.String() + "\r\n"
+
 }

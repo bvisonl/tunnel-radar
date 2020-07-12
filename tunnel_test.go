@@ -3,16 +3,11 @@ package main
 import (
 	"net/http"
 	"testing"
-	"time"
 )
 
 func TestTunnel(t *testing.T) {
 
-	tunnel := tunnelRadarConfig.Tunnels["testServer"]
-	go tunnel.Spawn()
-
-	// Allow time for tunnel to start
-	time.Sleep(1 * time.Second)
+	wg.Wait() // wait for the CLI to finish testing
 
 	// Make request
 	resp, err := http.Get("http://127.0.0.1:3100")

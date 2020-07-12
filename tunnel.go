@@ -54,6 +54,10 @@ func (tunnel *Tunnel) Spawn() error {
 	for tunnel.Disabled == false {
 		conn, err := listener.Accept()
 
+		if tunnel.Disabled == true {
+			return nil
+		}
+
 		if err != nil && err != io.EOF {
 			log.Printf("An error occurred while accepting a connection on %s. Error: %s\r\n", tunnel.Alias, err)
 			return err
@@ -93,4 +97,5 @@ func (tunnel *Tunnel) Enable() {
 func (tunnel *Tunnel) Disable() {
 	tunnel.Status = text.FgRed.Sprint("OFFLINE")
 	tunnel.Disabled = true
+	tunnel.Listener.Close()
 }
