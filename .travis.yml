@@ -20,7 +20,7 @@ before_install:
   - docker-compose -f tests/servers/docker-compose.yml up -d
 
 script:
-  - go test -v -race -covermode=atomic -coverprofile=coverage.out
+  - go test -v -covermode=atomic -coverprofile=coverage.out
 
 after_success:
   - goveralls -coverprofile=coverage.out -service=travis-ci -repotoken $COVERALLS_TOKEN
