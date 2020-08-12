@@ -15,7 +15,7 @@ A tool to manage your SSH tunnels
 ## Installation 👨‍💻
 ```bash
 # Download from the repository
-$ git clone https://github.com/bvison/tunnel-radar.git
+$ git clone https://github.com/bvisonl/tunnel-radar.git
 $ cd tunnel-radar
 $ go build -o tunnel-radar
 ```
